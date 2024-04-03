@@ -6,7 +6,7 @@ class Movie {
 
     public $title;
     public $director;
-    public $genre;
+    public $genres;
     public $publicationYear;
     public $poster; // NULL
 
@@ -16,13 +16,13 @@ class Movie {
      *
      * @param  string $title
      * @param  string $director
-     * @param  string $genre
+     * @param  string[] $genres
      * @param  int $publicationYear
      */
-    function __construct($title, $director, $genre, $publicationYear) {
+    function __construct($title, $director, $genres, $publicationYear) {
         $this->title = $title;
         $this->director = $director;
-        $this->genre = $genre;
+        $this->genres = $genres;
         $this->publicationYear = $publicationYear;
     }
 
