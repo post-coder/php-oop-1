@@ -1,29 +1,37 @@
-<?php
+<?php require './Layout/header.php' ?>
 
-require './db.php';
+<h1>Titolo</h1>
 
-var_dump($movies);
-?>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - OOP</title>
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<div class="row row-cols-2">
 
-</head>
-<body>
+    <?php
+    foreach($movies as $movie) {
+        // var_dump($movie);
+        ?>
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="<?= $movie->poster ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="movie-title"><?= $movie->title ?></h5>
+                    <h6 class="movie-director text-info "><?= $movie->director ?></h6>
+                    <ul class="movie-genres">
+                        <?php 
+                        foreach($movie->genres as $genre) {
+                            echo "<li>$genre</li>";
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 
-<div class="container py-5">
-    <h1>Titolo</h1>
+    
+
+
 </div>
 
-
-<!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</body>
-</html>
+<?php require './Layout/footer.php' ?>

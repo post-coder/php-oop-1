@@ -8,7 +8,7 @@ class Movie {
     public $director;
     public $genres;
     public $publicationYear;
-    public $poster; // NULL
+    public $poster = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-r_cd2YunvZ5iqRYvb4QJ312hlRGqDNnTRmLVuxRw7CDnH1yQLf6dKrCdJ-9dCrwukHI&usqp=CAU'; // NULL
 
     
     /**
