@@ -21,6 +21,10 @@ require './db.php';
 
             object-fit: cover;
         }
+
+        .movie-age {
+            font-size: .7em;
+        }
     </style>
 </head>
 <body>

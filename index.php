@@ -22,6 +22,10 @@
                         }
                         ?>
                     </ul>
+
+                    <small class="text-secondary movie-age">
+                        (pubblicato <?=    $movie->getAge() == 0 ? "quest'anno" : $movie->getAge() . " anni fa" ?>)
+                    </small>
                 </div>
             </div>
         </div>
