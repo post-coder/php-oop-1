@@ -15,11 +15,11 @@ class Movie {
      * __construct
      *
      * @param  string $title
-     * @param  string $director
+     * @param  Director $director
      * @param  string[] $genres
      * @param  int $publicationYear
      */
-    function __construct($title, $director, $genres, $publicationYear) {
+    function __construct($title, Director $director, $genres, $publicationYear) {
         $this->title = $title;
         $this->director = $director;
         $this->genres = $genres;

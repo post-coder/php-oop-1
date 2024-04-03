@@ -1,11 +1,19 @@
 <?php
 
 require './Models/Movie.php';
+require './Models/Director.php';
 
+$venier = new Director("Massimo", "Venier", "italiana");
+$lanthimos = new Director("Yorgos", "Lanthimos", "greca");
+
+
+
+
+// ______________________________________________________
 
 $movies = [
-    new Movie("Poor Things!", "Yorgos Lanthimos", ["Commedia", "Drammatico", "Sentimentale"], 2024),
-    new Movie("La leggenda di Al, John e Jack", "Massimo Venier", ["Commedia", "Gangster", "Noir"], 2002),
+    new Movie("Poor Things!", $lanthimos, ["Commedia", "Drammatico", "Sentimentale"], 2024),
+    new Movie("La leggenda di Al, John e Jack", $venier, ["Commedia", "Gangster", "Noir"], 2002),
 ];
 
 

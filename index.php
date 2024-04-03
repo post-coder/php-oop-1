@@ -14,7 +14,7 @@
                 <img src="<?= $movie->poster ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="movie-title"><?= $movie->title ?></h5>
-                    <h6 class="movie-director text-info "><?= $movie->director ?></h6>
+                    <h6 class="movie-director text-info "><?= $movie->director->getFullName() ?></h6>
                     <ul class="movie-genres">
                         <?php 
                         foreach($movie->genres as $genre) {
